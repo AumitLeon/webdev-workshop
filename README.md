@@ -95,7 +95,7 @@ Let's get started on actually writing some HTML code. Open uo your `index.html` 
 ```
 
 If you open your index.html file (with your browser) you should see the following: 
-![Alt text](/images/index1.png?raw=true)
+![Alt text](html-tutorial/images/index1.png?raw=true)
 
 
 
