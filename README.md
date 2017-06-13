@@ -17,7 +17,8 @@ In every HTML document, all the content is encapsulated within `<html>` tags. Th
 <html> </html>
 ```
 
-**Headers**
+**Headers:**
+
 Header tags allow you to format text on your page as, unsuprisignly, headers. The largest header is `<h1>` and the smallest is `<h6>`. We will see later on how you can possible style headers to make them bigger or smaller, and even change their styles. 
 ```html
 <h1>This is the largest header!</h1>
@@ -26,17 +27,32 @@ Header tags allow you to format text on your page as, unsuprisignly, headers. Th
 <h6>... You get the point.</h6>
 ```
 
-**Paragraphs**
+**Paragraphs:**
+
 Pargraphs are another very basic formatting construct within html. You invoke a paragraph with the `<p>` tag.
 ```html
 <p> This is a pragraph. It's a great paragraph. It might even be the best paragraph.</p>
 ```
 
-**Links**
+**Links:**
+
 Links are what allow us to link to other pages and other websitese. Links are invoked with the `<a>` tag, but in order to get it to work properly, we'll need to specify the `href` attribute. The `href` attribute is basically what the link should point to.
 ```html
 <a href="https://www.google.com/"> This link points to Google.com!</a>
 ```
+
+**Divs:**
+
+Divs are used to seperate content into self contained buckets. The `<div>` tag allows you specify content that you want to seperate from everything else. You could have several reasons for this: you want your divs to contain logically different content, you want your divs to have different styles, you want your code to be a bit more modular and organized, etc.
+```html
+<div class="awesome"> 
+	<p>This is a really awesome paragraph</p> 
+</div>
+<div class="moreAwesome">
+	<p>This is an even more awesome paragraph</p>
+<div> 
+```
+For each of these classes, we set a class attribute... but why? We'll get to the importance of classes shortly. I'll let you think about why it might be useful to identify elements by class. 
 
 
 
