@@ -41,6 +41,13 @@ Links are what allow us to link to other pages and other websitese. Links are in
 <a href="https://www.google.com/"> This link points to Google.com!</a>
 ```
 
+
+**Images:**
+You might want to add images to your website. The `<img>` tag helps you do just that. Just kuje we had to do with links, we have to specify another attribute to let the browser know where the image is located, the `src` attribute allows us to do this. Let's imagine that we have our image in the same directory as our html file. 
+```html
+<img src="funnycats.jpg">
+```
+
 **Divs:**
 
 Divs are used to seperate content into self contained buckets. The `<div>` tag allows you specify content that you want to seperate from everything else. You could have several reasons for this: you want your divs to contain logically different content, you want your divs to have different styles, you want your code to be a bit more modular and organized, etc.
@@ -52,7 +59,7 @@ Divs are used to seperate content into self contained buckets. The `<div>` tag a
 	<p>This is an even more awesome paragraph</p>
 <div> 
 ```
-For each of these classes, we set a class attribute... but why? We'll get to the importance of classes shortly. I'll let you think about why it might be useful to identify elements by class. 
+For each of these classes, we set a class attribute... but why? We'll get to the importance of classes shortly. I'll let you think about why it might be useful to identify elements by class. Let's look at a few more tags. 
 
 
 
