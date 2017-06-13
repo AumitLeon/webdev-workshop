@@ -1,13 +1,14 @@
 ## Table of Contents
 
 - [What is HTML](#what-is-html)
-- [Basic Structure](#basic-structure)
+- [Intro to HTML](#intro-to-html)
   - [Some HTML Tags](#some-html-tags)
+  - [Project Structure](#project-structure)
 
 ## What is HTML
 yolo
 
-## Basic Structure
+## Intro to HTML
 HTML syntax is fairly simple to follow-- all the content is encapsulated within tags: `<tag>Content</tag>`. There are several tags that you should become familar with, but as time goes on and you become more advanced, you'll find that there are many tags that useful in specific situations!
 
 ### Some HTML Tags
@@ -43,6 +44,7 @@ Links are what allow us to link to other pages and other websitese. Links are in
 
 
 **Images:**
+
 You might want to add images to your website. The `<img>` tag helps you do just that. Just kuje we had to do with links, we have to specify another attribute to let the browser know where the image is located, the `src` attribute allows us to do this. Let's imagine that we have our image in the same directory as our html file. 
 ```html
 <img src="funnycats.jpg">
@@ -59,7 +61,23 @@ Divs are used to seperate content into self contained buckets. The `<div>` tag a
 	<p>This is an even more awesome paragraph</p>
 <div> 
 ```
-For each of these classes, we set a class attribute... but why? We'll get to the importance of classes shortly. I'll let you think about why it might be useful to identify elements by class. Let's look at a few more tags. 
+For each of these classes, we set a class attribute... but why? We'll get to the importance of classes shortly. I'll let you think about why it might be useful to identify elements by class. 
+
+## Project Structure
+Basic HTML websites have a fairly simple structure that is built with tags like the ones we've already seen. Let's get started by setting up our repo: create a directory called `html-tutorial`, and within that directory, add a file named `index.html`. Let's also add `about.html` and `blog.html`, and another folder within this director named `images`.
+
+Thus, your file structure should look something like this: 
+```
+html-tutorial/
+	index.html
+	about.html
+	blog.html
+	images/
+```
+
+
+
+
 
 
 
