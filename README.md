@@ -75,6 +75,29 @@ html-tutorial/
 	images/
 ```
 
+Let's get started on actually writing some HTML code. Open uo your `index.html` file and copy and paste the following code:
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- This is a comment. -->
+
+        <title>Hello world!</title>
+    </head>
+    <body>
+        <!-- Put all content here. -->
+        <div>
+        	<h1>Woah, this is really cool!</h1>
+        	<p>This is my very first HTML Project!</p>
+        </div>
+    </body>
+</html>
+```
+
+If you open your index.html file (with your browser) you should see the following: 
+![Alt text](/images/index1.png?raw=true)
+
+
 
 
 
