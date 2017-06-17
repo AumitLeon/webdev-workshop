@@ -9,7 +9,7 @@
   - [Working with CSS](#working-with-css)
   - [Selectors](#selectors)
     - [Inline CSS](#inline-css) 
-    - [Selecting by ID anc Class](#selecting-by-id-and-class)
+    - [Selecting by ID and Class](#selecting-by-id-and-class)
 
 ## What is HTML
 yolo
