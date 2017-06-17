@@ -6,6 +6,7 @@
   - [Project Structure](#project-structure)
   - [Debugging](#debugging)
 - [The Big Beautiful World of CSS](#the-big-beautiful-world-of-css)
+  - [Working with CSS](#working-with-css)
 
 ## What is HTML
 yolo
@@ -144,6 +145,38 @@ To learn more about debugging, check out https://rubberduckdebugging.com/.
 
 
 ## The Big Beautiful World of CSS
+CSS stands for "Cascading Style Sheets"-- these files essentially help you style your HTML websites. You might have noticed that our basic example in our `index.html` is pretty drab right now, but CSS gives us the power to make our page look really cool. Disclaimer: there are a lot of really awesome things you can theoretically do with CSS-- I'm no artist, and I'm not entirely sure how some people manage to make the stuff that they do make, but this guide can give you some insight into how CSS works and provide you with a basis into how to do some cooler stuff.
+
+If you are intersted in seeing what some baller frontend work with CSS looks like, check out https://codepen.io/2016/popular/pens/. (Some of these examples include JavaScript and other framworks, but most of them are very CSS heavy.)
+
+### Working with CSS
+At the core, CSS basically allows you to style HTML elements. As we've already seen, HTML documents are entirely composed of elements, so CSS will let us modify the look of every element in our document.
+
+If you wanted to style all the paragraph tags in your HTML document, you might write something like this: 
+```css
+p {
+    color: red;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+```
+
+Much like the HTML code we've been looking at, CSS code has a fairly simple to follow syntatic structure. As you might have guessed, this CSS code would format all the text within `<p></p>` tags to have the color red, be aligned to the center, with letters in uppercase and spaced out by 4 pixels. 
+
+You chan change a lot more if you would like-- we will cover a few things in this workshop, but you should feel free to explore on your own to modify your websites in whatever way you want!
+
+A few other text based properties:
+
+`direction`: Speciefies the direction the text is written.
+`text-indent`: Describes the indentiation spacin of the first line of the text block.
+`text-shadow`: Add a shadow effect to the text.
+`word-spacing`: Descibes how words should be spaced out. 
+
+For a comprehensive list on how you could modify text with CSS-- check out: https://www.w3schools.com/css/css_text.asp.
+
+
+
 
 
 
