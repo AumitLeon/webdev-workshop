@@ -7,6 +7,9 @@
   - [Debugging](#debugging)
 - [The Big Beautiful World of CSS](#the-big-beautiful-world-of-css)
   - [Working with CSS](#working-with-css)
+  - [Selectors](#selectors)
+    - [Inline CSS](#inline-css) 
+    - [Selecting by ID anc Class](#selecting-by-id-and-class)
 
 ## What is HTML
 yolo
@@ -169,14 +172,111 @@ You chan change a lot more if you would like-- we will cover a few things in thi
 A few other text based properties:
 
 `direction`: Speciefies the direction the text is written.
+
 `text-indent`: Describes the indentiation spacin of the first line of the text block.
+
 `text-shadow`: Add a shadow effect to the text.
+
 `word-spacing`: Descibes how words should be spaced out. 
 
 For a comprehensive list on how you could modify text with CSS-- check out: https://www.w3schools.com/css/css_text.asp.
 
+### Selectors 
+CSS allows you style an HTML page via selectors. 
 
+In general, this is the pattern you will be following: 
 
+```
+selector {
+  property: value;
+  [You can specify as many property/value pairs as you want]
+}
+```
+
+The selector can come in a variety of formats-- you can select a group of elements by spceifying a specific tag:
+
+For example, as we've seen, the following modifies any text within `<p></p>` tags:
+```css
+p {
+    color: red;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+```
+
+### Inline CSS
+If you want to modify an HTML tag, and have it be a one off change (maybe you only want to modify a single tag), you can use *inline css*. How does it work? 
+
+To specify an inline style for an element, you would do the following `<tag style="property:value"> </tag>`
+In you look at your `index.html` file, let's modify the header using inline css. 
+
+```html
+<!-- This is the only line we're changing right now. The rest of the file is the same. -->
+<h1 style="color:blue">Woah, this is really cool!</h1>
+```
+Now if you open up `index.html` with your browser again, you should see:
+![Alt text](html-tutorial/images/index1.png?raw=true) 
+
+In general, inline css is defined within the opening tag of whatever element it is you want to specify. Inline CSS isn't a great choice, mainly because it makes your code much more difficult to follow. If you have a large HTML file and every element is styled using inline css, that would mean you would need to painstakingly go through every element to modify their styles. This isn't ideal, to say the least. Luckily, there are ways to make your styling more modular.
+
+### Selecing by ID and class
+Another way to specify the tag is to select a group of elements by `id`. How does this work? Well, let's revist the code in our `index.html`. 
+
+So far this is what it looks like 
+### `index.html`
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello world!</title>
+    </head>
+    <body>
+        <!-- Put all content here. -->
+        <div>
+        	<h1>Woah, this is really cool!</h1>
+        	<p>This is my very first HTML Project!</p>
+        </div>
+    </body>
+</html>
+```
+
+In order to add an `id` attribute to an html tag, you would do the following: `<tag id="someIdValue"> blah blah blah </tag>`, where tag can be any tag you want to identify with the id value. 
+
+Now, let's add an `id` attribute to the header tag. 
+```html
+<!-- This is the only line we're changing right now. The rest of the file is the same. -->
+<h1 id="coolID">Woah, this is really cool!</h1>
+```
+
+Great! You just specifed the that particular `<h1>` tag to be identified by that particular id value. Note: this doesn't specify *all* `<h1>` tags. Instead, it only specifies tags that have the same `id` value. 
+
+Now that we have a way to directly identify that particular tag, let's use CSS to modify it. This is what our `index.html` looks like following the addition of our CSS. (Note, we took out the inline styling from the previous example to illustrate selecting by `id`.)
+```html
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        #coolID {
+          color:blue;
+        }
+        <title>Hello world!</title>
+    </head>
+    <body>
+        <!-- Put all content here. -->
+        <div>
+        	<h1>Woah, this is really cool!</h1>
+        	<p>This is my very first HTML Project!</p>
+        </div>
+    </body>
+</html>
+```
+
+If you open up `index.html` with your browser again, you should see the same styling from the previous example. 
+
+Why is the better? It looks like this is more lines of code than our inline example. While that is true, this has produced more llnes of code, this code is much more readably than our previous example. If you a large HTML file, having your styles specified in one place let's you make changes by directing your attention to a single place, as opposed to having to comb through your code to find the element style that needs modification. 
+
+Modular code is better code! 
 
 
 
