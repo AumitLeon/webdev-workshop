@@ -216,7 +216,7 @@ In you look at your `index.html` file, let's modify the header using inline css.
 <h1 style="color:blue">Woah, this is really cool!</h1>
 ```
 Now if you open up `index.html` with your browser again, you should see:
-![Alt text](html-tutorial/images/index1.png?raw=true) 
+![Alt text](html-tutorial/images/inline-css.png?raw=true) 
 
 In general, inline css is defined within the opening tag of whatever element it is you want to specify. Inline CSS isn't a great choice, mainly because it makes your code much more difficult to follow. If you have a large HTML file and every element is styled using inline css, that would mean you would need to painstakingly go through every element to modify their styles. This isn't ideal, to say the least. Luckily, there are ways to make your styling more modular.
 
@@ -265,7 +265,7 @@ Now that we have a way to directly identify that particular tag, let's use CSS t
     <body>
         <!-- Put all content here. -->
         <div>
-        	<h1>Woah, this is really cool!</h1>
+        	<h1 id="coolID">Woah, this is really cool!</h1>
         	<p>This is my very first HTML Project!</p>
         </div>
     </body>
