@@ -4,6 +4,7 @@
 - [Intro to HTML](#intro-to-html)
   - [Some HTML Tags](#some-html-tags)
   - [Project Structure](#project-structure)
+  - [Debugging](#debugging)
 
 ## What is HTML
 yolo
@@ -75,7 +76,7 @@ html-tutorial/
 	images/
 ```
 
-Let's get started on actually writing some HTML code. Open uo your `index.html` file and copy and paste the following code:
+Let's get started on actually writing some HTML code. Open up your `index.html` file and copy and paste the following code:
 ```html
 <!DOCTYPE html>
 <html>
@@ -96,6 +97,34 @@ Let's get started on actually writing some HTML code. Open uo your `index.html` 
 
 If you open your index.html file (with your browser) you should see the following: 
 ![Alt text](html-tutorial/images/index1.png?raw=true)
+
+All html files are denoted via the .html filetype. Okay, that's great, but what's going in here? 
+
+`<!DOCTYPE html>` 
+Tells your browser to interpet the following file as HTML. Every HTML page should start with this tag. Unlike other tags, there is not closing tag for this first tag. 
+
+`<html>`
+This tag encapsulates all of your HTML codes. In other words, every other element is a child this tag. 
+
+`<head>`
+The head tag denotes the header section of the html document-- this content is not rendered by the browser to the page, but simply contains information that tells the browser how the page should be produced. Typically, this is where you would link JavaScript scripts, cdn connections, and CSS stylesheets-- all of which we will discuss further on. Note that there is closing `</head>` tag. 
+
+`<title>Hello world!</title>`
+The title tag declares the title of this html document. When you opened your html page, you might have noticed that this title was the name of the tab in your browser. Note that this tag is a child of the `<head>` tag. 
+
+`<body>`
+The body tag describes the content of the body of this HTML page. The bulk of your content will go here. 
+
+`<!-- Put all content here. -->`
+This tag describes a comment-- comments are not rendered by the browser, and are merely meant to help the programmer. It's good to get in the habbit of commenting your code-- it will help you keep better track of your work, and will also make it easier for others to collobrate with you.
+
+Note that `<head>` has exactly two children: `<head>` and `<body>`, but all other tags can have as many children as you desire them to have!
+
+Not so bad, right? 
+
+## Debugging
+
+
 
 
 
