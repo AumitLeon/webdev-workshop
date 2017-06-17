@@ -205,7 +205,7 @@ p {
 }
 ```
 
-### Inline CSS
+#### Inline CSS
 If you want to modify an HTML tag, and have it be a one off change (maybe you only want to modify a single tag), you can use *inline css*. How does it work? 
 
 To specify an inline style for an element, you would do the following `<tag style="property:value"> </tag>`
@@ -216,11 +216,11 @@ In you look at your `index.html` file, let's modify the header using inline css.
 <h1 style="color:blue">Woah, this is really cool!</h1>
 ```
 Now if you open up `index.html` with your browser again, you should see:
-![Alt text](html-tutorial/images/inline-css.png?raw=true) 
+![Alt text](html-tutorial/images/inline-example.png?raw=true) 
 
 In general, inline css is defined within the opening tag of whatever element it is you want to specify. Inline CSS isn't a great choice, mainly because it makes your code much more difficult to follow. If you have a large HTML file and every element is styled using inline css, that would mean you would need to painstakingly go through every element to modify their styles. This isn't ideal, to say the least. Luckily, there are ways to make your styling more modular.
 
-### Selecing by ID and class
+#### Selecting by ID and class
 Another way to specify the tag is to select a group of elements by `id`. How does this work? Well, let's revist the code in our `index.html`. 
 
 So far this is what it looks like 
