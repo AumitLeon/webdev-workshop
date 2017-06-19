@@ -9,7 +9,9 @@
   - [Working with CSS](#working-with-css)
   - [Selectors](#selectors)
     - [Inline CSS](#inline-css) 
-    - [Selecting by ID and Class](#selecting-by-id-and-class)
+    - [Selecting by ID](#selecting-by-id)
+    - [Selecting by Class](#selecting-by-class)
+  - [Linking Style Sheets](#linking=style-sheets)
 
 ## What is HTML
 yolo
@@ -220,7 +222,7 @@ Now if you open up `index.html` with your browser again, you should see:
 
 In general, inline css is defined within the opening tag of whatever element it is you want to specify. Inline CSS isn't a great choice, mainly because it makes your code much more difficult to follow. If you have a large HTML file and every element is styled using inline css, that would mean you would need to painstakingly go through every element to modify their styles. This isn't ideal, to say the least. Luckily, there are ways to make your styling more modular.
 
-#### Selecting by ID and class
+#### Selecting by ID
 Another way to specify the tag is to select a group of elements by `id`. How does this work? Well, let's revist the code in our `index.html`. 
 
 So far this is what it looks like 
@@ -278,9 +280,49 @@ Why is the better? It looks like this is more lines of code than our inline exam
 
 Modular code is better code! 
 
+#### Selecting by Class
+Although selecting by `id` works well and allows you to write more modular styles for your HTML pages, the `id` selector is ideally used to target specific elements as opposed to an entire class of elements (Note: you can have multiple elements with the same `id`, but CSS has another construct for targetting a group of elements.)
 
+If you want to style a group of elements at once, you can specify the `class` attribute. It also makes more sense semantically to select a group of elements via an attribute called `class` than it does using an attribute called `id`, although both can be used to select a group of elements. 
 
+You specify the `class` attribute the same way you the `id` attribute. Let's make some modifications to our `index.html`:
+#### `index.html`
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .mainDiv {
+            color:blue;
+            }
+            .secondaryDiv {
+                color: red;
+            }
+        </style>
+        <title>Hello world!</title>
+    </head>
+    <body>
+        <!-- Put all content here. -->
+        <div class="mainDiv">
+        	<h1 id="coolID">Woah, this is really cool!</h1>
+        	<p>This is my very first HTML Project!</p>
+        </div>
+        <div class="secondaryDiv">
+            <p>This is cool content.</p>
+        </div>
+    </body>
+</html>
+```
 
+We specified that the first div is part of the class `maindDiv` and we added a second div that is part of the `secondaryClass`. If you look at our `style` code now, we've identified the divs by `class` instead of `id`. Note, instead of prepending the name of the attribute with `#` like we did for `id`, we use `.` for classes instead. 
+
+If you reopen your `index.html` with your browser:
+![Alt text](html-tutorial/images/select-class.png?raw=true) 
+
+So far, we've illustrated *internal style sheets*, and although they've made things simple to follow, you can imagine a scenario where you have many more elements in your HTML document, and you need to do a lot more styling: your HTML file will become unruly pretty quickly. Luckily, we can add even more modularity to our code. 
+
+### Linking Style Sheets
+For the sake of the examples we've been x
 
 
 
