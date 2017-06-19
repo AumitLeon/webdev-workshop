@@ -322,11 +322,78 @@ If you reopen your `index.html` with your browser:
 So far, we've illustrated *internal style sheets*, and although they've made things simple to follow, you can imagine a scenario where you have many more elements in your HTML document, and you need to do a lot more styling: your HTML file will become unruly pretty quickly. Luckily, we can add even more modularity to our code. 
 
 ### Linking Style Sheets
-For the sake of the examples we've been x
+For the sake of the examples we've been looking at, internal style sheets have worked fine simple because we don't have that much code to work with. But when you start creating your own websites, you'll quickly find that more modulairty would be incredibly helpful. If you have many HTML elements to keep track of and a lot of styling going on within those elements, an internal style sheet would be difficult to work with.
 
+In general, you'll always want to encapsulate various parts of your project in different, well-named files for the sake of being more organized. It also makes sense to have your HTML code seperated from your CSS code-- it is much less confusing to work with when you have larger projects, and it is a good habit to get into. 
 
+To link to a style sheet, you would add the following line within your `<head>` element:
+```html
+<!-- This is the only line we're changing right now. The rest of the file is the same. -->
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+<head>
+```
+Now, when your browser goes to render your html page, it will also link to your `styles.css` style sheet which will provide the styling for your page.
 
+**Note:** We've used the `href` attibute before (when specifying the source for images and links), but it is important to note that must provide the full path of where the particular resource you are linking to is stored. If it's a link, it's the entire link; if it's an image or stylsheet, then you have to specify the path to the source.
 
+For example: if the style sheet is located in the same directory as the HTML file you are linking it to, you can simple use `href="styles.css"`. But if your stylesheet is in a subdirectory called "styling", then you would use `href="styling/styles.css"`. 
+
+Let's add a new subdirectory to our project structure called `styles`, and within this subdirectory add a file called `coolstyles.css`.
+
+Our new file structure should look like this:
+```
+html-tutorial/
+	index.html
+	about.html
+	blog.html
+	images/
+    styles/
+        coolstyles.css
+```
+
+Add this code to `styles.css`:
+#### `styles.css`
+```css
+.mainDiv {
+    color:blue;
+}
+
+.secondaryDiv {
+    color: red;
+ }
+#coolID {
+    color:blue;
+}
+```
+And let's modify our `index.html`:
+#### `index.html`
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles/coolstyles.css">
+        <title>Hello world!</title>
+    </head>
+    <body>
+        <!-- Put all content here. -->
+        <div class="mainDiv">
+        	<h1 id="coolID">Woah, this is really cool!</h1>
+        	<p>This is my very first HTML Project!</p>
+        </div>
+        <div class="secondaryDiv">
+            <p>This is cool content.</p>
+        </div>
+    </body>
+</html>
+```
+
+Now, if you reopen `index.html` with your browser, there shouldn't be any changes from the last time we opened it (we simply moved the styling components to a different file.)
+
+You can have as many style sheets as you want, but in order to use them you have to be sure to include the `link` in the `head` portion of your HTML document. 
+
+So far, we've covered the basics of HTML and styling with CSS, but there is a lot more cool styling that can be done with CSS to create awesome webpages. If you're interested in reading more, check out the following: https://www.w3schools.com/css/default.asp
 
 
 
@@ -341,7 +408,7 @@ class Button extends Component {
   }
 }
 
-export default Button; // Don’t forget to use export default!
+export default Button; // Don’t forget to use export default!h
 ```
 
 class Button extends Component {
