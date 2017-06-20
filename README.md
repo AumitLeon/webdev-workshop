@@ -15,7 +15,7 @@ No prior programming experience is required. Although, if you have some prior ex
     - [Inline CSS](#inline-css) 
     - [Selecting by ID](#selecting-by-id)
     - [Selecting by Class](#selecting-by-class)
-  - [Linking Style Sheets](#linking=style-sheets)
+  - [Linking Style Sheets](#linking-style-sheets)
 - [Interactivity with JavaScript](#interactivity-with-javascript)
   - [Basic JavaScript Concepts](#basic-javascript-concepts)
      - [Variables](#variables)
@@ -517,7 +517,7 @@ Some other jQuery events:
 * `keydown` -- Event for when a user presses a button. 
 For further reading and more references, check out: https://www.w3schools.com/jquery/jquery_events.asp
 
-#### Modify CSS
+#### Modifying CSS
 Now that we know how to add some interactivity, let's see how we can go about manipulating the CSS on our page dynamically. 
 
 Look at the following code: 
