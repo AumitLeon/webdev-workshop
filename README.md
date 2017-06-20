@@ -1,3 +1,7 @@
+This is an Introduction to Web Development workshop that focuses on HTML, CSS, and JavaScript with an eye towards jQuery. This is by no means a comprehensive guide, but hopefully it provides you with a solid foundation with web development. 
+
+No prior programming experience is required. Although, if you have some prior experience with HTML and CSS, you might find this guide to be quite boring. 
+
 ## Table of Contents
 
 - [What is HTML](#what-is-html)
@@ -17,9 +21,13 @@
      - [Variables](#variables)
      - [Arrays](#arrays)
   - [JS and jQuery](#js-and-jquery)
+   - [Handling Events](#handling-events)
+   - [Modifying CSS](#modifying-css)
+- [Mini Project](#small-project)
+- [Conclusion](#conclusion)
 
 ## What is HTML
-yolo
+HTML stands for *Hypertext Markup Language*, and it is the language that underlies all the websites that you can access via your web browser. HTML is comprised of tags that provide instructions to your browser as to how a particular page should be rendered. Like any other computer/programming language, HTML has a particular syntax that you need to adhere to. 
 
 ## Intro to HTML
 HTML syntax is fairly simple to follow-- all the content is encapsulated within tags: `<tag>Content</tag>`. There are several tags that you should become familar with, but as time goes on and you become more advanced, you'll find that there are many tags that useful in specific situations!
@@ -112,29 +120,17 @@ If you open your index.html file (with your browser) you should see the followin
 
 All html files are denoted via the .html filetype. Okay, that's great, but what's going in here? 
 
-`<!DOCTYPE html>` 
+* `<!DOCTYPE html>`: Tells your browser to interpet the following file as HTML. Every HTML page should start with this tag. Unlike other tags, there is not closing tag for this first tag. 
 
-Tells your browser to interpet the following file as HTML. Every HTML page should start with this tag. Unlike other tags, there is not closing tag for this first tag. 
+* `<html>`: This tag encapsulates all of your HTML codes. In other words, every other element is a child this tag. 
 
-`<html>`
+* `<head>`: The head tag denotes the header section of the html document-- this content is not rendered by the browser to the page, but simply contains information that tells the browser how the page should be produced. Typically, this is where you would link JavaScript scripts, cdn connections, and CSS stylesheets-- all of which we will discuss further on. Note that there is closing `</head>` tag. 
 
-This tag encapsulates all of your HTML codes. In other words, every other element is a child this tag. 
+* `<title>Hello world!</title>`: The title tag declares the title of this html document. When you opened your html page, you might have noticed that this title was the name of the tab in your browser. Note that this tag is a child of the `<head>` tag. 
 
-`<head>`
+* `<body>`: The body tag describes the content of the body of this HTML page. The bulk of your content will go here. 
 
-The head tag denotes the header section of the html document-- this content is not rendered by the browser to the page, but simply contains information that tells the browser how the page should be produced. Typically, this is where you would link JavaScript scripts, cdn connections, and CSS stylesheets-- all of which we will discuss further on. Note that there is closing `</head>` tag. 
-
-`<title>Hello world!</title>`
-
-The title tag declares the title of this html document. When you opened your html page, you might have noticed that this title was the name of the tab in your browser. Note that this tag is a child of the `<head>` tag. 
-
-`<body>`
-
-The body tag describes the content of the body of this HTML page. The bulk of your content will go here. 
-
-`<!-- Put all content here. -->`
-
-This tag describes a comment-- comments are not rendered by the browser, and are merely meant to help the programmer. It's good to get in the habbit of commenting your code-- it will help you keep better track of your work, and will also make it easier for others to collobrate with you.
+* `<!-- Put all content here. -->`: This tag describes a comment-- comments are not rendered by the browser, and are merely meant to help the programmer. It's good to get in the habbit of commenting your code-- it will help you keep better track of your work, and will also make it easier for others to collobrate with you.
 
 Note that `<head>` has exactly two children: `<head>` and `<body>`, but all other tags can have as many children as you desire them to have!
 
@@ -178,13 +174,10 @@ You chan change a lot more if you would like-- we will cover a few things in thi
 
 A few other text based properties:
 
-`direction`: Speciefies the direction the text is written.
-
-`text-indent`: Describes the indentiation spacin of the first line of the text block.
-
-`text-shadow`: Add a shadow effect to the text.
-
-`word-spacing`: Descibes how words should be spaced out. 
+* `direction`: Speciefies the direction the text is written.
+* `text-indent`: Describes the indentiation spacin of the first line of the text block.
+* `text-shadow`: Add a shadow effect to the text.
+* `word-spacing`: Descibes how words should be spaced out. 
 
 For a comprehensive list on how you could modify text with CSS-- check out: https://www.w3schools.com/css/css_text.asp.
 
@@ -351,10 +344,11 @@ Our new file structure should look like this:
 html-tutorial/
 	index.html
 	about.html
-	blog.html
-	images/
+	goals.html
+    experiment.html
     styles/
-        coolstyles.css
+         coolstyles.css
+    images/
 ```
 
 Add this code to `styles.css`:
@@ -501,7 +495,7 @@ $('p').append(' <a href="https://www.youtube.com/watch?v=bLHL75H_VEM">Click this
 //Append this HTML snippet after the selected element. 
 $('p').after('<p>jQuery is awesome!</p>');
 ``` 
-##### Handling Events
+#### Handling Events
 Our goal is to add some interactivity to our basic page, let's figure out how we can do that. Observe the following code: 
 ```js
 $('p').on('click', function () {
@@ -526,7 +520,7 @@ Some other jQuery events:
 * `keydown` -- Event for when a user presses a button. 
 For further reading and more references, check out: https://www.w3schools.com/jquery/jquery_events.asp
 
-##### Modify CSS
+#### Modify CSS
 Now that we know how to add some interactivity, let's see how we can go about manipulating the CSS on our page dynamically. 
 
 Look at the following code: 
@@ -541,5 +535,161 @@ $('p').on('click', function() {
 ```
 What's going on with in this snippet? 
 We've already covered how the selector is called with the `click` event, and then calls an anonymous function as it's callback. Let's observe what happens within the callback:
-* `$(this).css({..});` -- Get the CSS of that particular element (`<p>` in this case).
-* 
+`$(this).css({..});` -- Get the CSS of that particular element (`<p>` in this case).
+
+Within the CSS call, we see that we are specifying CSS properties with key/value pairs. Note that each CSS property as well as its value is encapsulated within quotes. 
+
+If you were to run this code, it would modify the stylin for every `<p>` tag when you click on it. 
+
+This isn't an ideal solution since it will only change the style the one time you click the element-- what if you want it to change every time you click on it? 
+
+Add the following to your `styles.css`:
+```css
+.coolText {
+  color: green;
+  font-weight: 400;
+  line-height: 55px;
+}
+```
+And then add the following snippet to your `index.js` file:
+```js
+$(document).ready(function() {
+    // all custom jQuery will go here
+    $('div').on('click', function() {
+	  $(this).toggleClass('coolText');
+	});
+});
+```
+Now if you open `index.html`, you candan try this out!
+
+Before your JavaScript code can go about using your custom jQuery code, it needs to verify that all the elements in the page have been properly loaded. Thus, in your JavaScript file you use `$(document).ready()` as your first function, and then pass a callback that will contain all your jQuery code. You need to vall `(document).ready()` when linking to jQuery locally and not when running jQuery code from within the console because when you run code in the console, you can be sure that all the elements have already been loaded (you wouldn't be able to use the browser console otherwise). Linking to jQuery within a JavaScript file you wrote yourself needs to wait for the page to load all the lements. 
+
+Effectively, this code will wait for the document to be ready, and then after it verifies that the document is ready, it will call a function that contains all of your jQuery code. 
+
+## Small Project
+Now that we've gone through these web development basics, you're in great shape to get started on your own project. You'll be armed with the basic code we've established in this tutorial, and insight into how to make static HTML web pages! 
+
+Our final file structure: 
+```
+html-tutorial/
+	index.html
+	about.html
+	goals.html
+    experiment.html
+    styles/
+         coolstyles.css
+    images/
+```
+
+Let's look at the final version of our files: 
+
+##### `index.html`
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles/coolstyles.css">
+        <title>Hello world!</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>        
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <!-- Basic NavBar -->
+        <ul>
+          <li><a href="index.html"></li>  
+          <li><a href="about.html"></li>
+          <li><a href="goals.html"></li>
+          <li><a href="experiment.html"></li>
+        </ul>  
+
+        <!-- Put all content here. -->
+        <div class="mainDiv">
+            
+            <h1 id="coolID">Woah, this is really cool!</h1>
+            <p>This is my very first HTML Project!</p>
+        </div>
+        <div class="secondaryDiv">
+            <p>This is cool content.</p>
+        </div>
+    </body>
+</html>
+```
+
+We've added a simple navigation list to travel between various pages.
+
+#####  `about.html`, `goals.html`, `experiment.html`
+<!DOCTYPE html>
+```html
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles/coolstyles.css">
+        <title>Hello world!</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>        
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <!-- Basic NavBar -->
+        <ul>
+          <li><a href="index.html"></li>  
+          <li><a href="about.html"></li>
+          <li><a href="goals.html"></li>
+          <li><a href="experiment.html"></li>
+        </ul>  
+    </body>
+</html>
+```
+
+##### `coolstyles.css`
+```css
+.mainDiv {
+    color:blue;
+}
+
+.secondaryDiv {
+    color: red;
+ }
+#coolID {
+    color:blue;
+}
+
+.coolText {
+  color: green;
+  font-weight: 400;
+  line-height: 55px;
+}
+```
+
+##### `index.js`
+```js
+$(document).ready(function() {
+    // all custom jQuery will go here
+    $('div').on('click', function() {
+	  $(this).toggleClass('coolText');
+	});
+});
+```
+
+**Your mission**: So far, you have a couple of HTML pages that link to eachother, all of which are loaded with jQuery, your `index.js` file, and your CSS styling within your `coolstyles.css`. Your job is to add content to all of these pages that utilizes the core concepts we covered here. That means you can add structured content using HTML tags, style them using CSS, and add interactivity using jQuery. Follow the paradigms we've worked on up to this point as a start, but don't be afraid to explore new ideas and constructs on your own!
+
+Here are the bare minimum requirements of what this completed site should include: 
+* In your `index.html`, add a description of what the the site is for. 
+* In your `about.html`, include a little bit about yourself. That could mean text, it could mean wacky designs, selfies, or cat videos. 
+* In your `goals.html`, reflect on what you've learned, and what you want to pursue next. 
+* In your `experiment.html`, go wild. Do whatever you want, just make sure it's awesome. 
+
+Not so bad, right? This mini project is meant to be more fun than it is difficult. I encourage you to explore the ideas we talked about and push yourself to the next level. You can combine a lot of what we covered in some very creative ways to create an awesome site. 
+
+Some things you can try and explore on your own:
+* A better looking Navigation bar... our navigation bar is pretty basic right now. For a more thorough look at CSS: https://www.w3schools.com/css/
+* Animation with jQuery: http://api.jquery.com/animate/
+* Explore awesome fonts from google: https://fonts.google.com/
+* We didn't cover Bootstrap, but if you're feeling up to the challenge, you're at a place now where you can look into how to use it: http://getbootstrap.com/css/
+
+## Conclusion
+Congrats! You now have the knoweledge to create your own static websites. For some of you, this may be the beginning of your programming journey; for others, this might just be something you're learning for fun. Regardless of your prior experience, I hope this tutorial has inspired you to continue programming and finding new ways to express your creativity. Static websites are cool, but there is so much more to learn out there. 
+
+In the course of working on the mini project my hope is that while this tutorial provided you with a good foundation, you still found yourself googling a million things in the process of building out whatever your vision was. That's good. Endlessely travelling through programming forums (stack overflow more often than not), is part of the growth of all programmers-- it means what you already know isn't sufficient to solve the problem at hand, so you need to strap on your thinking hat and search for clues that can help lead you to the answers you need. 
+
+
+
+

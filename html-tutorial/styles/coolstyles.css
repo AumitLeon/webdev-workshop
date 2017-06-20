@@ -8,3 +8,11 @@
 #coolID {
     color:blue;
 }
+
+.coolText {
+  color: green;
+  font-weight: 400;
+  line-height: 55px;
+}
+
+
