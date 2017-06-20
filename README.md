@@ -23,7 +23,7 @@ No prior programming experience is required. Although, if you have some prior ex
   - [JS and jQuery](#js-and-jquery)
    - [Handling Events](#handling-events)
    - [Modifying CSS](#modifying-css)
-- [Mini Project](#small-project)
+- [Mini Project](#mini-project)
 - [Conclusion](#conclusion)
 
 ## What is HTML
@@ -563,7 +563,7 @@ Before your JavaScript code can go about using your custom jQuery code, it needs
 
 Effectively, this code will wait for the document to be ready, and then after it verifies that the document is ready, it will call a function that contains all of your jQuery code. 
 
-## Small Project
+## Mini Project
 Now that we've gone through these web development basics, you're in great shape to get started on your own project. You'll be armed with the basic code we've established in this tutorial, and insight into how to make static HTML web pages! 
 
 Our final file structure: 
