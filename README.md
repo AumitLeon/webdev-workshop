@@ -30,7 +30,7 @@ No prior programming experience is required. Although, if you have some prior ex
 HTML stands for *Hypertext Markup Language*, and it is the language that underlies all the websites that you can access via your web browser. HTML is comprised of tags that provide instructions to your browser as to how a particular page should be rendered. Like any other computer/programming language, HTML has a particular syntax that you need to adhere to. 
 
 ## Intro to HTML
-HTML syntax is fairly simple to follow-- all the content is encapsulated within tags: `<tag>Content</tag>`. There are several tags that you should become familar with, but as time goes on and you become more advanced, you'll find that there are many tags that useful in specific situations!
+HTML syntax is fairly simple to follow-- all the content is encapsulated within tags: `<tag>Content</tag>`. There are several tags that you should become familar with, but as time goes on and you become more advanced, you'll find that there are many tags that are useful in specific situations!
 
 ### Some HTML Tags
 In every HTML document, all the content is encapsulated within `<html>` tags. The browser won't render your website unless all your subsequent tags are within the HTML tags!
@@ -41,7 +41,7 @@ In every HTML document, all the content is encapsulated within `<html>` tags. Th
 
 **Headers:**
 
-Header tags allow you to format text on your page as, unsuprisignly, headers. The largest header is `<h1>` and the smallest is `<h6>`. We will see later on how you can possible style headers to make them bigger or smaller, and even change their styles. 
+Header tags allow you to format text on your page as, unsuprisignly, headers. The largest header is `<h1>` and the smallest is `<h6>`. We will see later on how you can possibly style headers to make them bigger or smaller, and even change their styles. 
 ```html
 <h1>This is the largest header!</h1>
 <h2>This is the second largset header!</h2>
@@ -58,7 +58,7 @@ Pargraphs are another very basic formatting construct within html. You invoke a 
 
 **Links:**
 
-Links are what allow us to link to other pages and other websitese. Links are invoked with the `<a>` tag, but in order to get it to work properly, we'll need to specify the `href` attribute. The `href` attribute is basically what the link should point to.
+Links are what allow us to link to other pages and other websites. Links are invoked with the `<a>` tag, but in order to get it to work properly, we'll need to specify the `href` attribute. The `href` attribute is basically what the link should point to.
 ```html
 <a href="https://www.google.com/"> This link points to Google.com!</a>
 ```
@@ -66,7 +66,7 @@ Links are what allow us to link to other pages and other websitese. Links are in
 
 **Images:**
 
-You might want to add images to your website. The `<img>` tag helps you do just that. Just kuje we had to do with links, we have to specify another attribute to let the browser know where the image is located, the `src` attribute allows us to do this. Let's imagine that we have our image in the same directory as our html file. 
+You might want to add images to your website. The `<img>` tag helps you do just that. Just like we had to do with links, we have to specify another attribute to let the browser know where the image is located: the `src` attribute allows us to do this. Let's imagine that we have our image in the same directory as our HTML file. 
 ```html
 <img src="funnycats.jpg">
 ```
@@ -85,14 +85,15 @@ Divs are used to seperate content into self contained buckets. The `<div>` tag a
 For each of these classes, we set a class attribute... but why? We'll get to the importance of classes shortly. I'll let you think about why it might be useful to identify elements by class. 
 
 ### Project Structure
-Basic HTML websites have a fairly simple structure that is built with tags like the ones we've already seen. Let's get started by setting up our repo: create a directory called `html-tutorial`, and within that directory, add a file named `index.html`. Let's also add `about.html` and `blog.html`, and another folder within this director named `images`.
+Basic HTML websites have a fairly simple structure that is built with tags like the ones we've already seen. Let's get started by setting up our repo: create a directory called `html-tutorial`, and within that directory, add a file named `index.html`. Let's also add `about.html`, `goals.html`, and `experiment.html`, as well as another folder within this directory named `images`.
 
 Thus, your file structure should look something like this: 
 ```
 html-tutorial/
 	index.html
 	about.html
-	blog.html
+	goals.html
+    experiment.html
 	images/
 ```
 
@@ -118,21 +119,21 @@ Let's get started on actually writing some HTML code. Open up your `index.html` 
 If you open your index.html file (with your browser) you should see the following: 
 ![Alt text](html-tutorial/images/index1.png?raw=true)
 
-All html files are denoted via the .html filetype. Okay, that's great, but what's going in here? 
+All html files are denoted via the .html filetype. Okay, that's great, but what's going here? 
 
 * `<!DOCTYPE html>`: Tells your browser to interpet the following file as HTML. Every HTML page should start with this tag. Unlike other tags, there is not closing tag for this first tag. 
 
-* `<html>`: This tag encapsulates all of your HTML codes. In other words, every other element is a child this tag. 
+* `<html>`: This tag encapsulates all of your HTML codes. In other words, every other element is a child of this tag. 
 
-* `<head>`: The head tag denotes the header section of the html document-- this content is not rendered by the browser to the page, but simply contains information that tells the browser how the page should be produced. Typically, this is where you would link JavaScript scripts, cdn connections, and CSS stylesheets-- all of which we will discuss further on. Note that there is closing `</head>` tag. 
+* `<head>`: The head tag denotes the header section of the html document-- this content is not rendered by the browser to the page, but simply contains information that tells the browser how the page should be produced. Typically, this is where you would link JavaScript scripts and CSS stylesheets-- both of which we will discuss further on. Note that there is closing `</head>` tag. 
 
 * `<title>Hello world!</title>`: The title tag declares the title of this html document. When you opened your html page, you might have noticed that this title was the name of the tab in your browser. Note that this tag is a child of the `<head>` tag. 
 
 * `<body>`: The body tag describes the content of the body of this HTML page. The bulk of your content will go here. 
 
-* `<!-- Put all content here. -->`: This tag describes a comment-- comments are not rendered by the browser, and are merely meant to help the programmer. It's good to get in the habbit of commenting your code-- it will help you keep better track of your work, and will also make it easier for others to collobrate with you.
+* `<!-- Put all content here. -->`: This tag describes a comment-- comments are not rendered by the browser, and are merely meant to help the programmer. It's good to get in the habbit of commenting your code-- it will help you keep better track of your work, and will also make it easier for others to collaborate with you.
 
-Note that `<head>` has exactly two children: `<head>` and `<body>`, but all other tags can have as many children as you desire them to have!
+Note that `<head>` has exactly two children: `<head>` and `<body>`, but all other tags can have as many children as you want!
 
 Not so bad, right? As we move on to some more HTML and combine it with other things like CSS and JavaScript, we'll come across more tags that we haven't already discussed-- fear not! You now have a solid intution of how HTML tags work. 
 
@@ -593,10 +594,10 @@ Let's look at the final version of our files:
     <body>
         <!-- Basic NavBar -->
         <ul>
-          <li><a href="index.html"></li>  
-          <li><a href="about.html"></li>
-          <li><a href="goals.html"></li>
-          <li><a href="experiment.html"></li>
+          <li><a href="index.html">Home</a></li>  
+          <li><a href="about.html">About</a></li>
+          <li><a href="goals.html">Goals</a></li>
+          <li><a href="experiment.html">Experiment</a></li>
         </ul>  
 
         <!-- Put all content here. -->
@@ -615,8 +616,8 @@ Let's look at the final version of our files:
 We've added a simple navigation list to travel between various pages.
 
 #####  `about.html`, `goals.html`, `experiment.html`
-<!DOCTYPE html>
 ```html
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="styles/coolstyles.css">
@@ -627,10 +628,10 @@ We've added a simple navigation list to travel between various pages.
     <body>
         <!-- Basic NavBar -->
         <ul>
-          <li><a href="index.html"></li>  
-          <li><a href="about.html"></li>
-          <li><a href="goals.html"></li>
-          <li><a href="experiment.html"></li>
+          <li><a href="index.html">Home</a></li>  
+          <li><a href="about.html">About</a></li>
+          <li><a href="goals.html">Goals</a></li>
+          <li><a href="experiment.html">Experiment</a></li>
         </ul>  
     </body>
 </html>
