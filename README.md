@@ -13,6 +13,7 @@
     - [Selecting by Class](#selecting-by-class)
   - [Linking Style Sheets](#linking=style-sheets)
 - [Interactivity with JavaScript](#interactivity-with-javascript)
+  - [Variables](#variables)
 
 ## What is HTML
 yolo
@@ -397,6 +398,32 @@ You can have as many style sheets as you want, but in order to use them you have
 So far, we've covered the basics of HTML and styling with CSS, but there is a lot more cool styling that can be done with CSS to create awesome webpages. If you're interested in reading more, check out the following: https://www.w3schools.com/css/default.asp
 
 ### Interactivity with JavaScript
+Now that we have basic functionality of a static website, we can start to focus on more advanced features of static websites using Javascript. JavaScript is an incredibly rich language and many of its features are beyond the scope of this tutorial, but there are specific things that we can do to make our basic websites even more awesome. 
+
+For the purposes of this tutorial, we will turn our attention to **jQuery**, a JavaScript library that focueses on HTML docment manpulation, animation, event handling, and much more. 
+
+When we say that jQuery is a JavaScript library, we simply mean that it contains pre-written JavaScript utilities that come packaged together nicely. JavaScript libraries provide a layer of abstraction from the messy implementation details that support those functionalities. In general, using libraries will save you a bunch of time while letting you do awesome things!
+
+#### Variables
+Let's write some basic Javacript code and see figure out what it does. 
+```js
+var flavor = "Chocalate";
+console.log("The best icecream flavor is: " + flavor);
+```
+The first line `var flavor = "Chocalate";` is a variable declaration. It sets the value of `flavor` to the string `chocalate`. 
+
+*In declaring a variable, we first wrote `var`, which is a keyword in Javascript that specifies the declaration of a variable. 
+*`flavor` is the name of our variable. In general, the names of your variables can contain letters, numbers, dollar signs, or underscores. It is good practice to have descriptive variable names-- this will help you produce more readable code. 
+    ***Note on variable names:** Contrary to popular belief, longer variable names don't affect the overal performance of your program (Assembly has no notion of variable names, but that's neither her nor there...). With that in mind, make your variables *descriptive enough* without being too verbose.
+*Our variable here is a string, so we write `"chocalate"` with quotation marks around it. 
+*Finally, all JavaScript statements are closed with a semicolon. Syntax can be a tricky thing when you're getting started-- don't feel pressure to memarize every little quirk within every language you end up working with. Google is every programmer's long-term auxillary memory!
+
+The second line `console.log("The best icecream flavor is: " + flavor);` will print to the console: `The best icecream flavor is: chocalate`. I
+
+In JavaScript, the `console.log()` function will print to the console. We *concatenated* our string with the variable value we set for `flavor`. But where does console.log() print to? If you save the above code to a file with the `.js` extension, then within your browser you can open up dev tools (on chrome: `More tools > Developer tools`) and navigate to the `console` tab, you can write in the lines we wrote and see the correct output. Whenever you use `console.log()`, it will write the output to the console. 
+
+
+
 
 
 
