@@ -1,3 +1,4 @@
+#Introduction to Web Development
 This is an Introduction to Web Development workshop that focuses on HTML, CSS, and JavaScript with an eye towards jQuery. This is by no means a comprehensive guide, but hopefully it provides you with a solid foundation with web development. 
 
 No prior programming experience is required. Although, if you have some prior experience with HTML and CSS, you might find this guide to be quite boring. 
@@ -90,11 +91,11 @@ Basic HTML websites have a fairly simple structure that is built with tags like 
 Thus, your file structure should look something like this: 
 ```
 html-tutorial/
-	index.html
-	about.html
-	goals.html
+    index.html
+    about.html
+    goals.html
     experiment.html
-	images/
+    images/
 ```
 
 Let's get started on actually writing some HTML code. Open up your `index.html` file and copy and paste the following code:
