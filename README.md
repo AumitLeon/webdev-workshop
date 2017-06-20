@@ -572,9 +572,9 @@ Now that we've gone through these web development basics, you're in great shape 
 Our final file structure: 
 ```
 html-tutorial/
-	index.html
-	about.html
-	goals.html
+    index.html
+    about.html
+    goals.html
     experiment.html
     styles/
          coolstyles.css
