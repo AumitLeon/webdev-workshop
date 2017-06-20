@@ -147,9 +147,6 @@ Debugging tools like the Chrome dev tools are a tremendously imporant tool for a
 
 To learn more about debugging, check out https://rubberduckdebugging.com/. 
 
-###possible short projcect? For fun? 
-
-
 ## The Big Beautiful World of CSS
 CSS stands for "Cascading Style Sheets"-- these files essentially help you style your HTML websites. You might have noticed that our basic example in our `index.html` is pretty drab right now, but CSS gives us the power to make our page look really cool. Disclaimer: there are a lot of really awesome things you can theoretically do with CSS-- I'm no artist, and I'm not entirely sure how some people manage to make the stuff that they do make, but this guide can give you some insight into how CSS works and provide you with a basis into how to do some cooler stuff.
 
@@ -342,9 +339,9 @@ Let's add a new subdirectory to our project structure called `styles`, and withi
 Our new file structure should look like this:
 ```
 html-tutorial/
-	index.html
-	about.html
-	goals.html
+    index.html
+    about.html
+    goals.html
     experiment.html
     styles/
          coolstyles.css
