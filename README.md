@@ -484,3 +484,62 @@ Just like we saw with CSS, you can specify elements you want to work with in jQu
 
 To read more about various selectors in jQuery, check out: https://www.w3schools.com/jquery/jquery_ref_selectors.asp
 
+When you use a selector like `$("p")`, you return an array of all the paragraph elements in the HTML page. So, as you might've guessed, you can do `$("p:)[0]` to select the first pagraph element, `$("p:)[1]` to select the second element, and so on and so forth. 
+
+Let's experiment with our `index.html` file. Previously we added some lines that ensured our page would be accessing the jQuery library from Google, so if you open up your file with the browser, navigate to the console within the browser dev tools, you can run the following code and see the magic of jQuery.
+
+```js
+$('h1').html('lol');
+``` 
+This should replace the header text with "lol". If you want to revert the changes, just refresh the page. 
+
+You can do even more:
+```js
+//Append another element to the end of a specified element 
+$('p').append(' <a href="https://www.youtube.com/watch?v=bLHL75H_VEM">Click this!</a>');
+
+//Append this HTML snippet after the selected element. 
+$('p').after('<p>jQuery is awesome!</p>');
+``` 
+##### Handling Events
+Our goal is to add some interactivity to our basic page, let's figure out how we can do that. Observe the following code: 
+```js
+$('p').on('click', function () {
+    $(this).html('much wow');
+});
+```
+Woah, that's pretty different from anything else we've looked at so far. While there does seem to be a lot going on here, you can figure out what this code does. We select every `<p>` element with `$('p')`, and then use jQuery to specify that when these elements are clicked, change the content to `much wow`. Copy and paste this code in to your `js/index.js` and try it in yor own browser. 
+
+Let's look at this example a little closer: 
+* `$('p')` -- Selects all `<p>` elements.
+* `.on('Click', function() {...});` -- When a `<p>` element is clicked, run the anonymous function as it's callback.*
+* `$(this).html('much wow')` -- When the `Click` event is received, change the content of every `<p>` tag to "much wow".
+
+*An anonymous function is a function without a name. In this case, you see a function being called, but there is no function name. We won't cover functions in JavaScript, but if you would like to learn more, check out: https://www.w3schools.com/js/js_functions.asp 
+
+A callback function is a function that is called immediately after a different funciton is completed running and has returned. In our case, the `on` function checks for the `click` event, and then calls the anonymous function as its callack. Callbacks won't be covered in depth here as they are a bit of a more advanced JavaScript topic, but if you want to learn more, check out: https://www.w3schools.com/jquery/jquery_callback.asp
+
+Some other jQuery events: 
+* `dblclick` -- Double click event.
+* `mouseenter` -- Event for when mouse enters an element. 
+* `mouseleave` -- Event for when mouse leaves an element.
+* `keydown` -- Event for when a user presses a button. 
+For further reading and more references, check out: https://www.w3schools.com/jquery/jquery_events.asp
+
+##### Modify CSS
+Now that we know how to add some interactivity, let's see how we can go about manipulating the CSS on our page dynamically. 
+
+Look at the following code: 
+```js
+$('p').on('click', function() {
+  $(this).css({
+    "color": "green",
+    "font-weight": "700",
+    "line-height": "40px",
+  });
+});
+```
+What's going on with in this snippet? 
+We've already covered how the selector is called with the `click` event, and then calls an anonymous function as it's callback. Let's observe what happens within the callback:
+* `$(this).css({..});` -- Get the CSS of that particular element (`<p>` in this case).
+* 
