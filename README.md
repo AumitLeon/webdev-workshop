@@ -12,6 +12,7 @@
     - [Selecting by ID](#selecting-by-id)
     - [Selecting by Class](#selecting-by-class)
   - [Linking Style Sheets](#linking=style-sheets)
+- [Interactivity with JavaScript](#interactivity-with-javascript)
 
 ## What is HTML
 yolo
@@ -394,6 +395,8 @@ Now, if you reopen `index.html` with your browser, there shouldn't be any change
 You can have as many style sheets as you want, but in order to use them you have to be sure to include the `link` in the `head` portion of your HTML document. 
 
 So far, we've covered the basics of HTML and styling with CSS, but there is a lot more cool styling that can be done with CSS to create awesome webpages. If you're interested in reading more, check out the following: https://www.w3schools.com/css/default.asp
+
+### Interactivity with JavaScript
 
 
 
