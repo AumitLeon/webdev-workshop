@@ -400,16 +400,17 @@ You can have as many style sheets as you want, but in order to use them you have
 
 So far, we've covered the basics of HTML and styling with CSS, but there is a lot more cool styling that can be done with CSS to create awesome webpages. If you're interested in reading more, check out the following: https://www.w3schools.com/css/default.asp
 
-### Interactivity with JavaScript
+## Interactivity with JavaScript
 Now that we have basic functionality of a static website, we can start to focus on more advanced features of static websites using Javascript. JavaScript is an incredibly rich language and many of its features are beyond the scope of this tutorial, but there are specific things that we can do to make our basic websites even more awesome. 
 
 For the purposes of this tutorial, we will turn our attention to **jQuery**, a JavaScript library that focueses on HTML docment manpulation, animation, event handling, and much more. 
 
 When we say that jQuery is a JavaScript library, we simply mean that it contains pre-written JavaScript utilities that come packaged together nicely. JavaScript libraries provide a layer of abstraction from the messy implementation details that support those functionalities. In general, using libraries will save you a bunch of time while letting you do awesome things!
-#### Basic JavaScript Concepts
+
+### Basic JavaScript Concepts
 Before we dive into using JavaScript libraries, we should get a grasp of some very simple JavaScript syntax and concepts. Unlike HTML, the *hypertext markup language*, JavaScript is an actual programming language with more functionalities and capabilities. 
 
-##### Variables
+#### Variables
 Let's write some basic Javacript code and see figure out what it does. 
 ```js
 var flavor = "Chocalate";
@@ -442,7 +443,7 @@ If you open up the console from your browser and execute the first two lines, th
 
 Make note of the spacing we used when adding variables to our `console.log()` statement. We use `+` to concatenate strings with variables, and space accordingly to make the output look like we want it to. Feel free to experiement with spacing to see how it effects the output. 
 
-##### Arrays
+#### Arrays
 Another important featute that you may find useful when using JavaScript (or any other programming language for that matter) is the array.
 
 ```js
@@ -460,41 +461,26 @@ Arrays are super useful to encapsualte common data, and accessing various elemen
 
 JavaScript is an awesome language that allows you to do many very cool things-- if you want a more indepth introduction, check out https://www.w3schools.com/js/default.asp
 
-#### JS and jQuery
+### JS and jQuery
+Now let's see how we can use jQuery to do some cool stuff on our website. Inserting JavaScript into an HTML page is similar to inserting CSS. Add the following lines to your `index.html` direct below your opening `body` tag. 
+```html
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/js/index.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### `Button.js`
-
-```js
-import React, { Component } from 'react';
-
-class Button extends Component {
-  render() {
-    // ...
-  }
-}
-
-export default Button; // Don’t forget to use export default!h
+    <!-- All of your other content remains the same -->
+</body>
 ```
+You insert JavaScript by using the `<script>` tag-- you have the specify a source which is where the JavaScript code should exist. We see two examples above. The first sets `src` to a URL, and the second sets it to a a file called `index.js` within a directors called `js`. Both are valid. The first line is actually *importing jquery* via google's hosting service, and the second is serving JavaScript from a local directory. 
 
-class Button extends Component {
-  render() {
-    // ...
-  }
-}
+#### jQuery Selectors
+Just like we saw with CSS, you can specify elements you want to work with in jQuery by using selectors. The syntax for using selectors in jQuery is a little different, here are some basic examples: 
 
-export default Button; // Don’t forget to use export default!
-```
+* `$("*")` -- Selects all elements.
+* `$("h1")` -- Selects all `<h1>` elements
+* `$("#coolName")` -- Selects all elements with id="coolName".
+* `$(".coolName")` -- Selects all elements with class="coolName".
+* `$(".coolName, .coolerName")` -- Selects all elements with class="coolName" or class="coolerName". 
+
+To read more about various selectors in jQuery, check out: https://www.w3schools.com/jquery/jquery_ref_selectors.asp
+
