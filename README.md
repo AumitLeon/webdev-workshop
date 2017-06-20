@@ -13,7 +13,10 @@
     - [Selecting by Class](#selecting-by-class)
   - [Linking Style Sheets](#linking=style-sheets)
 - [Interactivity with JavaScript](#interactivity-with-javascript)
-  - [Variables](#variables)
+  - [Basic JavaScript Concepts](#basic-javascript-concepts)
+     - [Variables](#variables)
+     - [Arrays](#arrays)
+  - [JS and jQuery](#js-and-jquery)
 
 ## What is HTML
 yolo
@@ -403,8 +406,10 @@ Now that we have basic functionality of a static website, we can start to focus 
 For the purposes of this tutorial, we will turn our attention to **jQuery**, a JavaScript library that focueses on HTML docment manpulation, animation, event handling, and much more. 
 
 When we say that jQuery is a JavaScript library, we simply mean that it contains pre-written JavaScript utilities that come packaged together nicely. JavaScript libraries provide a layer of abstraction from the messy implementation details that support those functionalities. In general, using libraries will save you a bunch of time while letting you do awesome things!
+#### Basic JavaScript Concepts
+Before we dive into using JavaScript libraries, we should get a grasp of some very simple JavaScript syntax and concepts. Unlike HTML, the *hypertext markup language*, JavaScript is an actual programming language with more functionalities and capabilities. 
 
-#### Variables
+##### Variables
 Let's write some basic Javacript code and see figure out what it does. 
 ```js
 var flavor = "Chocalate";
@@ -418,9 +423,53 @@ The first line `var flavor = "Chocalate";` is a variable declaration. It sets th
 * Our variable here is a string, so we write `"chocalate"` with quotation marks around it. 
 * Finally, all JavaScript statements are closed with a semicolon. Syntax can be a tricky thing when you're getting started-- don't feel pressure to memarize every little quirk within every language you end up working with. Google is every programmer's long-term auxillary memory!
 
-The second line `console.log("The best icecream flavor is: " + flavor);` will print to the console: `The best icecream flavor is: chocalate`. I
+The second line `console.log("The best icecream flavor is: " + flavor);` will print to the console: `The best icecream flavor is: chocalate`. 
 
-In JavaScript, the `console.log()` function will print to the console. We *concatenated* our string with the variable value we set for `flavor`. But where does console.log() print to? If you save the above code to a file with the `.js` extension, then within your browser you can open up dev tools (on chrome: `More tools > Developer tools`) and navigate to the `console` tab, you can write in the lines we wrote and see the correct output. Whenever you use `console.log()`, it will write the output to the console. 
+In JavaScript, the `console.log()` function will print to the console. We *concatenated* our string with the variable value we set for `flavor`. But where does console.log() print to? If you open your browser you can open up dev tools (on chrome: `More tools > Developer tools`) and navigate to the `console` tab, you can write in the lines we wrote and see the correct output. Whenever you use `console.log()`, it will write the output to the console. 
+
+**Concatenation** can be a tough conept to follow, so let's look at another example. 
+```js
+var subject = "Math";
+
+console.log("My favorite class is: " + subject);
+
+var otherSubject = "History";
+
+console.log("I love " + subject + " and " + otherSubject + ".");
+```
+
+If you open up the console from your browser and execute the first two lines, the console should print `My favorite class is Math`; if you execute the next two lines, the console should print `I love Math and History.` 
+
+Make note of the spacing we used when adding variables to our `console.log()` statement. We use `+` to concatenate strings with variables, and space accordingly to make the output look like we want it to. Feel free to experiement with spacing to see how it effects the output. 
+
+##### Arrays
+Another important featute that you may find useful when using JavaScript (or any other programming language for that matter) is the array.
+
+```js
+var testScores = [96, 95, 98, 100, 100, 65];
+console.log("My first test score is: " + testScores[0]);
+```
+
+If you execute the following lines within the browser's console, you should see `My first test score is: 96`. But wait-- why is it 96 and not 95? Well, JavaScript arrays (and arrays within almost any other programming language you go on to work with) begin at *index 0* as opposed to *index 1*.
+
+If you wanted to access the second element, you would use `testScores[1]`, the third with `testScores[2]`, the fourth with `testScores[3]` and so on and so forth.
+
+You can declare an array like we did above, with instantiated values. In this case we are working with integer values, but you can easily have an array of strings as well: `var sandwiches = ["turkey", "tuna", "pb&j", "blt"];`
+
+Arrays are super useful to encapsualte common data, and accessing various elements within an array is very simple. 
+
+JavaScript is an awesome language that allows you to do many very cool things-- if you want a more indepth introduction, check out https://www.w3schools.com/js/default.asp
+
+#### JS and jQuery
+
+
+
+
+
+
+
+
+
 
 
 
