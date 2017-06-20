@@ -412,11 +412,11 @@ console.log("The best icecream flavor is: " + flavor);
 ```
 The first line `var flavor = "Chocalate";` is a variable declaration. It sets the value of `flavor` to the string `chocalate`. 
 
-*In declaring a variable, we first wrote `var`, which is a keyword in Javascript that specifies the declaration of a variable. 
-*`flavor` is the name of our variable. In general, the names of your variables can contain letters, numbers, dollar signs, or underscores. It is good practice to have descriptive variable names-- this will help you produce more readable code. 
-    ***Note on variable names:** Contrary to popular belief, longer variable names don't affect the overal performance of your program (Assembly has no notion of variable names, but that's neither her nor there...). With that in mind, make your variables *descriptive enough* without being too verbose.
-*Our variable here is a string, so we write `"chocalate"` with quotation marks around it. 
-*Finally, all JavaScript statements are closed with a semicolon. Syntax can be a tricky thing when you're getting started-- don't feel pressure to memarize every little quirk within every language you end up working with. Google is every programmer's long-term auxillary memory!
+* In declaring a variable, we first wrote `var`, which is a keyword in Javascript that specifies the declaration of a variable. 
+* `flavor` is the name of our variable. In general, the names of your variables can contain letters, numbers, dollar signs, or underscores. It is good practice to have descriptive variable names-- this will help you produce more readable code. 
+    * **Note on variable names:** Contrary to popular belief, longer variable names don't affect the overal performance of your program (Assembly has no notion of variable names, but that's neither her nor there...). With that in mind, make your variables *descriptive enough* without being too verbose.
+* Our variable here is a string, so we write `"chocalate"` with quotation marks around it. 
+* Finally, all JavaScript statements are closed with a semicolon. Syntax can be a tricky thing when you're getting started-- don't feel pressure to memarize every little quirk within every language you end up working with. Google is every programmer's long-term auxillary memory!
 
 The second line `console.log("The best icecream flavor is: " + flavor);` will print to the console: `The best icecream flavor is: chocalate`. I
 
