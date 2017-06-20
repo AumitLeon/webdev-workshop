@@ -1,4 +1,4 @@
-#Introduction to Web Development
+# Introduction to Web Development
 This is an Introduction to Web Development workshop that focuses on HTML, CSS, and JavaScript with an eye towards jQuery. This is by no means a comprehensive guide, but hopefully it provides you with a solid foundation with web development. 
 
 No prior programming experience is required. Although, if you have some prior experience with HTML and CSS, you might find this guide to be quite boring. 
